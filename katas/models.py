@@ -1,0 +1,22 @@
+from django.db import models
+from karatestyles.models import KarateStyle
+
+# Create your models here.
+
+STYLE_KARATE = (
+    ('Goju', 'Goju-Ryu'),
+    ('Shoto', 'Shotokan'),
+    ('Wado', 'Wado-Ryu'),
+    ('Shito','Shito-Ryu'),
+    ('Shorin','Shorin-Ryu')
+    )
+class Kata(models.Model):
+    style          = models.ForeignKey(KarateStyle, on_delete=models.DO_NOTHING, related_name='styles')
+    nameKata       = models.CharField(max_length=100)
+    qtde_moviments = models.IntegerField()
+    data_upload    = models.DateTimeField(auto_now_add=True)
+    file           = models.FileField(upload_to='videos/', blank=True, null=True)
+    duracao        = models.IntegerField(null=True, blank=True) # Duração do vídeo (opcional, em segundos)
+
+    def __str__(self):
+        return self.nameKata
