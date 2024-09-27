@@ -15,4 +15,4 @@ class ReviewDojo(models.Model):
     comment = models.TextField(null=True, blank=True)
 
     def __str__(self):
-        return self.dojo
+        return self.comment
