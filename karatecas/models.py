@@ -14,6 +14,16 @@ GRADUATION = (
     ('3kyu', 'Faixa Verde'),
     ('2kyu', 'Faixa Roxa'),
     ('1kyu', 'Faixa Marrom'),
+    ('1dan', 'Faixa Preta'),
+    ('2dan', 'Faixa Preta'),
+    ('3dan', 'Faixa Preta'),
+    ('4dan', 'Faixa Preta'),
+    ('5dan', 'Faixa Preta'),
+    ('6dan', 'Faixa Preta'),
+    ('7dan', 'Faixa Preta'),
+    ('8dan', 'Faixa Preta'),
+    ('9dan', 'Faixa Preta'),
+    ('10dan', 'Faixa Preta'),
 )
 
 class Karateca(models.Model):
