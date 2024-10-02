@@ -38,6 +38,9 @@ class Karateca(models.Model):
         blank=True,
         null=True 
     )
+    email      = models.CharField(max_length=100, blank=True, null=True)
+    celphone   = models.CharField(max_length=30, blank=True, null=True)
+    phone      = models.CharField(max_length=100, blank=True, null=True)
     street     = models.CharField(max_length=150)
     number     = models.IntegerField()
     zipcode    = models.CharField(max_length=16, blank=True, null=True)
