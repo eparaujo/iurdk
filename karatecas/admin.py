@@ -5,4 +5,4 @@ from karatecas.models import Karateca
 
 @admin.register(Karateca)
 class KaratecaAdmin(admin.ModelAdmin):
-    list_display = ('id', 'register', 'name', 'age', 'genre', 'street', 'number', 'zipcode', 'complement', 'district', 'city', 'state', 'country')
+    list_display = ('id', 'register', 'name', 'dojo', 'age', 'genre', 'street', 'number', 'zipcode', 'complement', 'district', 'city', 'state', 'country')

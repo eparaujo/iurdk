@@ -1,5 +1,5 @@
 from django.db import models
-
+from dojos.models import Dojo
 # Create your models here.
 
 GENRE = (
@@ -29,6 +29,7 @@ GRADUATION = (
 class Karateca(models.Model):
     register = models.IntegerField()
     name     = models.CharField(max_length=200)
+    dojo     = models.ForeignKey(Dojo, on_delete=models.DO_NOTHING, related_name='karatekadojo', null=True, blank=True)
     graduation = models.CharField(max_length=60, choices=GRADUATION, blank=True, null=True)
     age      = models.IntegerField()
     genre    = models.CharField(
