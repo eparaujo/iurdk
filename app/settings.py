@@ -39,9 +39,14 @@ INSTALLED_APPS = [
     'postures',
     'karatestyles',
     'workouts',
-    'times',
     'reviews',
-    'reviewsdojos',
+    #'reviewsdojos',
+    'turnos',
+    'genres',
+    'graduations',
+    'weekdays',
+    'classes',
+    
 ]
 
 MIDDLEWARE = [

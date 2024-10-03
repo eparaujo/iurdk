@@ -1,15 +1,8 @@
 from django.db import models
 from karatestyles.models import KarateStyle
 
-# Create your models here.
 
-STYLE_KARATE = (
-    ('Goju', 'Goju-Ryu'),
-    ('Shoto', 'Shotokan'),
-    ('Wado', 'Wado-Ryu'),
-    ('Shito','Shito-Ryu'),
-    ('Shorin','Shorin-Ryu')
-    )
+# Create your models here.
 class Kata(models.Model):
     style          = models.ForeignKey(KarateStyle, on_delete=models.DO_NOTHING, related_name='styles')
     nameKata       = models.CharField(max_length=100)

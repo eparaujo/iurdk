@@ -2,22 +2,23 @@ from katas.serializers import KataSerializer, KataStatsSerializer
 from django.db.models import Count, Avg
 from rest_framework import generics, views, response, status
 from rest_framework.permissions import IsAuthenticated
+from app.permissions import GlobalDefaultPermission
 from katas.models import Kata
 from reviews.models import Review
 
 # Create your views here.
 class KataCreateListAPIView(generics.ListCreateAPIView):
-    permission_classes = (IsAuthenticated,)    
+    permission_classes = (IsAuthenticated, GlobalDefaultPermission,)    
     queryset = Kata.objects.all()
     serializer_class = KataSerializer
 
 class KataRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
-    permission_classes = (IsAuthenticated,)    
+    permission_classes = (IsAuthenticated, GlobalDefaultPermission,)    
     queryset = Kata.objects.all()
     serializer_class = KataSerializer
 
 class KataStatsView(views.APIView):
-    permission_classes = (IsAuthenticated,)
+    permission_classes = (IsAuthenticated, GlobalDefaultPermission,)
     queryset = Kata.objects.all()
 
     def get(self, request):

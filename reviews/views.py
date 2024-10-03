@@ -6,11 +6,11 @@ from app.permissions import GlobalDefaultPermission
 
 
 class ReviewListCreateAPIView(generics.ListCreateAPIView):
-    #permission_classes = (IsAuthenticated, GlobalDefaultPermission),
+    permission_classes = (IsAuthenticated, GlobalDefaultPermission,)
     queryset = Review.objects.all()
     serializer_class = ReviewSerializer
 
 class ReviewRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
-    #permission_classes = (IsAuthenticated, GlobalDefaultPermission),
+    permission_classes = (IsAuthenticated, GlobalDefaultPermission,)
     queryset = Review.objects.all()
     serializer_class = ReviewSerializer

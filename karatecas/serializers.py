@@ -2,8 +2,8 @@ from rest_framework import serializers
 from karatecas.models import Karateca
 
 
-class KaratecaSerializer(serializers.ModelSerializer):
+class karatecaSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Karateca
-        fields = '__all__' 
+        fields = '__all__'
