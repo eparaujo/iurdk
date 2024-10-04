@@ -9,6 +9,7 @@ class Kata(models.Model):
     qtde_moviments = models.IntegerField()
     data_upload    = models.DateTimeField(auto_now_add=True)
     file           = models.FileField(upload_to='videos/', blank=True, null=True)
+    link           = models.URLField(max_length=300, blank=True, null=True)
     duracao        = models.IntegerField(null=True, blank=True) # Duração do vídeo (opcional, em segundos)
 
     def __str__(self):
