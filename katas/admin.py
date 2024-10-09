@@ -5,4 +5,4 @@ from katas.models import Kata
 
 @admin.register(Kata)
 class KataAdmin(admin.ModelAdmin):
-    list_display = ('style', 'nameKata', 'qtde_moviments', 'data_upload', 'file', 'link','duracao')
+    list_display = ('style', 'namekata', 'qtde_moviments', 'data_upload', 'file', 'link','duracao')
