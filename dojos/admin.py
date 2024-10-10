@@ -20,5 +20,5 @@ class DojoAdmin(admin.ModelAdmin):
         'city',
         'state',
         'country',
-        'aulas',
+        
         )

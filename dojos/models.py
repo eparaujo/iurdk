@@ -18,7 +18,7 @@ class Dojo(models.Model):
     city        = models.CharField(max_length=160, blank=True, null=True)
     state       = models.CharField(max_length=160, blank=True, null=True)
     country     = models.CharField(max_length=160, blank=True, null=True)
-    aulas       = models.ForeignKey(Aula, on_delete=models.DO_NOTHING, related_name='auladojo', blank=True, null=True)
+    aulas       = models.ManyToManyField(Aula, related_name='auladojo')
     sensei      = models.ManyToManyField(Sensei, related_name='sensei')
 
     def __str__(self):
