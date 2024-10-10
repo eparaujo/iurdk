@@ -2,6 +2,7 @@ from django.contrib import admin
 from dojos.models import Dojo
 
 
+
 # Register your models here.
 @admin.register(Dojo)
 class DojoAdmin(admin.ModelAdmin):
@@ -19,5 +20,5 @@ class DojoAdmin(admin.ModelAdmin):
         'city',
         'state',
         'country',
-        'aulas'
-    )
+        'aulas',
+        )

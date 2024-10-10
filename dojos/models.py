@@ -1,5 +1,6 @@
 from django.db import models
 from classes.models import Aula
+from senseis.models import Sensei
 
 
 # Create your models here.
@@ -18,6 +19,7 @@ class Dojo(models.Model):
     state       = models.CharField(max_length=160, blank=True, null=True)
     country     = models.CharField(max_length=160, blank=True, null=True)
     aulas       = models.ForeignKey(Aula, on_delete=models.DO_NOTHING, related_name='auladojo', blank=True, null=True)
+    sensei      = models.ManyToManyField(Sensei, related_name='sensei')
 
     def __str__(self):
         return self.tradename
