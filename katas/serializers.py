@@ -10,6 +10,6 @@ class KataSerializer(serializers.ModelSerializer):
 
 class KataStatsSerializer(serializers.Serializer):
     total_katas   = serializers.IntegerField()
-    #katas_styles  = serializers.ListField()
+    katas_by_styles  = serializers.ListField()
     total_review  = serializers.IntegerField()
     average_stars = serializers.FloatField()
