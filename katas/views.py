@@ -23,7 +23,7 @@ class KataStatsView(views.APIView):
 
     def get(self, request):
         total_katas = self.queryset.count()
-        katas_by_styles = self.queryset.values('kata__style').annotate(count=Count('id'))
+        katas_by_styles = self.queryset.values('style').annotate(count=Count('id'))
         total_review = Review.objects.count()
         average_stars = Review.objects.aggregate(avg_stars=Avg('stars'))['avg_stars']
 
